@@ -1,0 +1,138 @@
+@import '../components/reset';
+
+$lightGrey: #F0F0F0;
+$primaryGreen: #2EB738;
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: $primaryGreen;
+    font-size: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 1280px;
+    background: $lightGrey;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 350px); // 網格區塊寬度
+    grid-auto-rows: 1fr; // 讓所有的 gird-item 等高
+    grid-column-gap: 30px; // 網格區塊左右間距
+    grid-row-gap: 40px; // 網格區塊上下間距
+    justify-content: center;
+    padding: 80px 0px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #fff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 10px #D8D8D8;
+    border-radius: 100px 0 30px 0;
+    max-width: 350px;
+    height: 366px;
+
+    &:nth-child(1) {
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+
+        .item-inside {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 20px;
+            border-top: 1px solid $primaryGreen;
+            border-bottom: 1px solid $primaryGreen;
+            height: 366px;
+            position: relative;
+
+            .x1,
+            .x2,
+            .x3,
+            .x4 {
+                position: absolute;
+            }
+
+            .x1 {
+                top: -15px;
+                left: -39px;
+            }
+
+            .x2 {
+                top: -15px;
+                right: -39px;
+            }
+
+            .x3 {
+                bottom: -9px;
+                left: -39px;
+            }
+
+            .x4 {
+                bottom: -9px;
+                right: -39px;
+            }
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: bold;
+            line-height: 78px;
+        }
+
+    }
+
+    .leftBox {
+        display: flex;
+        flex-direction: column;
+
+        .sub-title {
+            font-size: 128px;
+            text-shadow: 4px 3px 0px $lightGrey;
+            height: 153px;
+            text-align: center;
+        }
+
+        .sub-item {
+            line-height: 24px;
+            height: 33px;
+            margin-bottom: 8px;
+        }
+
+        &:nth-child(4) {
+            padding-bottom: 0;
+        }
+    }
+
+    .rightBox {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+
+        .sub-item {
+            line-height: 24px;
+            height: 33px;
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.footer {
+    background: $primaryGreen 0% 0% no-repeat padding-box;
+    color: $lightGrey;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    padding: 8px 85px 8px 0px;
+}
