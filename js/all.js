@@ -1,4 +1,3 @@
-// let item = document.querySelectorAll('.item');
 // 宣告左側 Box
 let leftBox = document.querySelectorAll('.item .leftBox');
 let leftStr = ' ';
